@@ -1,0 +1,17 @@
+body{
+  background-color: gainsboro;
+  padding: 0;
+  margin: 0;
+}
+
+main{
+  cursor: crosshair;
+  height: 100vh;
+  width: 100%;
+}
+
+.app-container{
+  background-color: red;
+  height: 50%;
+  width: 50%;
+}
