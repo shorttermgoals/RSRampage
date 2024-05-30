@@ -10,8 +10,12 @@ main{
   width: 100%;
 }
 
-.app-container{
+.body997{
   background-color: red;
   height: 50%;
   width: 50%;
+}
+
+.car-part{
+  width: 60vh;
 }
