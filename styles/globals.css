@@ -5,17 +5,40 @@ body{
 }
 
 main{
-  cursor: crosshair;
   height: 100vh;
   width: 100%;
 }
 
 .body997{
-  background-color: red;
-  height: 50%;
-  width: 50%;
+}
+
+svg{
+  position: absolute;
+}
+
+img{
+  position: absolute;
 }
 
 .car-part{
-  width: 60vh;
+  width: 100vh;
+  pointer-events: visible;
 }
+
+.car-part:hover{
+  opacity: 0.92;
+}
+
+.car-part-svg{
+  width: 100vh;
+  z-index: 1000;
+}
+
+.bullet-hole{
+  cursor: crosshair;
+}
+
+svg path{
+  cursor: crosshair;
+}
+
