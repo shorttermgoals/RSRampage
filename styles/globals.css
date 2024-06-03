@@ -33,8 +33,18 @@ img{
   width: 100vh;
 }
 
+.car-part-swap:hover{
+  opacity: 0.85;
+  
+}
+
 .car-part-delete{
   width: 100vh;
+}
+
+.car-part-delete:hover{
+  cursor:grabbing;
+  opacity: 0.8;
 }
 
 .bullet-hole{
@@ -43,6 +53,17 @@ img{
 
 svg.car-part-svg path{
   cursor: crosshair;
+}
+
+svg.car-part-swap path,
+svg.car-part-swap circle,
+svg.car-part-swap ellipse,
+svg.car-part-swap rect,
+svg.car-part-swap line,
+svg.car-part-swap polyline,
+svg.car-part-swap polygon,
+svg.car-part-swap text {
+  cursor: grabbing;
 }
 
 svg {
