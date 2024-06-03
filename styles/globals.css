@@ -22,11 +22,6 @@ img{
 
 .car-part{
   width: 100vh;
-  pointer-events: visible;
-}
-
-.car-part:hover{
-  opacity: 0.92;
 }
 
 .car-part-svg{
@@ -34,11 +29,19 @@ img{
   z-index: 1000;
 }
 
+.car-part-swap{
+  width: 100vh;
+}
+
+.car-part-delete{
+  width: 100vh;
+}
+
 .bullet-hole{
   cursor: crosshair;
 }
 
-svg path{
+svg.car-part-svg path{
   cursor: crosshair;
 }
 
