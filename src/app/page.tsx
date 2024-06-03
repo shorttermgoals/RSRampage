@@ -16,8 +16,9 @@ export default function Home() {
   const handleClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (event.target instanceof SVGPathElement) {
 
-    const className = event.target.className.baseVal;
-    console.log(className);
+    const svgElement = (event.target as SVGPathElement).closest('svg');
+    const className = svgElement?.classList.contains('car-part-svg') ? 'car-part-svg' : '';
+    console.log(svgElement);
     handleBulletHoles(event);
     }
   };

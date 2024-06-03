@@ -45,3 +45,10 @@ svg.car-part-svg path{
   cursor: crosshair;
 }
 
+svg {
+  pointer-events: none;
+}
+
+svg path {
+  pointer-events: auto;
+}
