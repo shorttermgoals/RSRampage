@@ -63,7 +63,7 @@ svg.car-part-swap line,
 svg.car-part-swap polyline,
 svg.car-part-swap polygon,
 svg.car-part-swap text {
-  cursor: grabbing;
+  cursor: grabbing !important;
 }
 
 svg {
