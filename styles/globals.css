@@ -32,7 +32,7 @@ main{
 }
 
 .under-title{
-  margin-top: -1.5rem;
+  margin-top: -2.5rem;
   padding-right: 9.9vw;
   display: grid;
   justify-items: end;
@@ -47,15 +47,18 @@ main{
   align-items: center;
 }
 
-.url a{
+.url-text{
+  font-family: 'Futura', sans-serif;
+  font-weight: bold;
   margin-top: -0.1vw;
   font-size: 0.9vw;
   color: gainsboro;
 }
 
 .body997{
-  width: 50vw;
-  height: 62vh;
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
 }
 
 svg{
@@ -126,4 +129,35 @@ svg path {
 svg, img {
   user-select: none;
   -webkit-user-drag: none;
+}
+
+.image-background{
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  height: 60vh
+}
+
+.image{
+  margin-top: -150px;
+  width: 60vw;
+  display: grid;
+  justify-items: center;
+}
+
+.valla{
+  width: 54vw;
+  height: auto;
+}
+
+.reset-button{
+  display: grid;
+  justify-content: center;
+  width: 100%;
+}
+
+.button{
+  width: 3rem;
+  height: 1rem;
+  background-color:#333333;
 }
