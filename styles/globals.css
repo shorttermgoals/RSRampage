@@ -1,3 +1,9 @@
+a {
+  color: #333333;
+  font-family: 'Futura', sans-serif;
+  font-weight: bold;
+}
+
 body{
   background-color: gainsboro;
   padding: 0;
@@ -6,15 +12,50 @@ body{
 
 main{
   height: 100vh;
+}
+
+.container{
+  height: 100%;
+}
+
+.title{
+  margin-top: -2vw;
   width: 100%;
+  min-height: 20vh;
+  display: grid;
+  place-items: center;  
+}
+
+.title a{
+  font-size: 12vw;
+  letter-spacing: -0.7vw;
+}
+
+.under-title{
+  margin-top: -1.5rem;
+  padding-right: 9.9vw;
+  display: grid;
+  justify-items: end;
+}
+
+.url{
+  width: 12.4vw;
+  height: 1.7vw;
+  background-color: #333333;
   display: grid;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+}
+
+.url a{
+  margin-top: -0.1vw;
+  font-size: 0.9vw;
+  color: gainsboro;
 }
 
 .body997{
   width: 50vw;
-  height: 50vh;
+  height: 62vh;
 }
 
 svg{
@@ -80,4 +121,9 @@ svg {
 
 svg path {
   pointer-events: auto;
+}
+
+svg, img {
+  user-select: none;
+  -webkit-user-drag: none;
 }
