@@ -2,10 +2,21 @@
 
 
 import Car from "../../components/Car";
+import ResetButton from "../../components/ResetButton";
+import { useState } from "react";
 
 
 
 export default function Home() {
+
+  const [clicked, setClicked] = useState(false);
+  const [wingState, setWingState] = useState(false);
+  const [glassState, setGlassState] = useState(false);
+  const [rdState, setRdState] = useState(false);
+  const [rtState, setRtState] = useState(false);
+  const [pdState, setPdState] = useState(false);
+  const [ptState, setPtState] = useState(false);
+  const [skirtState, setSkirtState] = useState(false);
 
   return (
     <main>
@@ -21,12 +32,32 @@ export default function Home() {
         <div className="image-background">
           <div className="image">
             <img className="valla" src="/images/Valla.png"></img>
-            <Car></Car>
+            <Car 
+            clicked={clicked} setClicked={setClicked}
+            wingState={wingState} setWingState={setWingState}
+            glassState={glassState} setGlassState={setGlassState}
+            rdState={rdState} setRdState={setRdState}
+            rtState={rtState} setRtState={setRtState}
+            pdState={pdState} setPdState={setPdState}
+            ptState={ptState} setPtState={setPtState}
+            skirtState={skirtState} setSkirtState={setSkirtState}
+            />
           </div>
           
         </div>
         <div className="reset-button">
-          <div className="button"></div>
+          <div className="button">
+            <ResetButton
+            setClicked={setClicked}
+            setWingState={setWingState}
+            setGlassState={setGlassState}
+            setRdState={setRdState}
+            setRtState={setRtState}
+            setPdState={setPdState}
+            setPtState={setPtState}
+            setSkirtState={setSkirtState}
+            />
+          </div>
         </div>
       </div>
     </main>

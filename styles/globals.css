@@ -14,6 +14,83 @@ main{
   height: 100vh;
 }
 
+svg{
+  position: absolute;
+}
+
+img{
+  position: absolute;
+}
+
+svg {
+  pointer-events: none;
+}
+
+svg path {
+  pointer-events: auto;
+}
+
+svg, img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.body997{
+  width: 60vw;
+  margin-top: 120px;
+  display: grid;
+  justify-items: center;
+}
+
+.car-part{
+  width: 45vw;
+}
+
+.car-part-svg{
+  width: 45vw;
+  z-index: 1000;
+}
+
+.car-part-swap{
+  width: 45vw;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.car-part-swap:hover{
+  opacity: 0.85;
+  
+}
+
+.car-part-delete{
+  width: 45vw;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.car-part-delete:hover{
+  cursor:grabbing;
+  opacity: 0.8;
+}
+
+.bullet-hole{
+  cursor: crosshair;
+}
+
+svg.car-part-svg path{
+  cursor: crosshair;
+}
+
+svg.car-part-swap path,
+svg.car-part-swap circle,
+svg.car-part-swap ellipse,
+svg.car-part-swap rect,
+svg.car-part-swap line,
+svg.car-part-swap polyline,
+svg.car-part-swap polygon,
+svg.car-part-swap text {
+  cursor: grabbing !important;
+  pointer-events: auto;
+}
+
 .container{
   height: 100%;
 }
@@ -45,6 +122,7 @@ main{
   display: grid;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .url-text{
@@ -53,82 +131,6 @@ main{
   margin-top: -0.1vw;
   font-size: 0.9vw;
   color: gainsboro;
-}
-
-.body997{
-  width: 100%;
-  height: auto;
-  margin-top: 80px;
-}
-
-svg{
-  position: absolute;
-}
-
-img{
-  position: absolute;
-}
-
-.car-part{
-  width: 100vh;
-}
-
-.car-part-svg{
-  width: 100vh;
-  z-index: 1000;
-}
-
-.car-part-swap{
-  width: 100vh;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.car-part-swap:hover{
-  opacity: 0.85;
-  
-}
-
-.car-part-delete{
-  width: 100vh;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.car-part-delete:hover{
-  cursor:grabbing;
-  opacity: 0.8;
-}
-
-.bullet-hole{
-  cursor: crosshair;
-}
-
-svg.car-part-svg path{
-  cursor: crosshair;
-}
-
-svg.car-part-swap path,
-svg.car-part-swap circle,
-svg.car-part-swap ellipse,
-svg.car-part-swap rect,
-svg.car-part-swap line,
-svg.car-part-swap polyline,
-svg.car-part-swap polygon,
-svg.car-part-swap text {
-  cursor: grabbing !important;
-  pointer-events: auto;
-}
-
-svg {
-  pointer-events: none;
-}
-
-svg path {
-  pointer-events: auto;
-}
-
-svg, img {
-  user-select: none;
-  -webkit-user-drag: none;
 }
 
 .image-background{
@@ -148,16 +150,27 @@ svg, img {
 .valla{
   width: 54vw;
   height: auto;
+  pointer-events: none;
 }
 
 .reset-button{
-  display: grid;
-  justify-content: center;
   width: 100%;
+  height: 4vh;
+  display: grid;
+  align-self: end;
+  justify-content: center;
 }
 
 .button{
-  width: 3rem;
-  height: 1rem;
-  background-color:#333333;
+  width: 8vw;
+  transition: opacity 0.2s ease-in-out;
 }
+
+.button:hover{
+  opacity: 0.9;
+}
+
+svg.button path{
+  cursor: pointer;
+}
+

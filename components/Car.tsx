@@ -8,17 +8,31 @@ interface Coordinate {
     bulletNo: number;
   }
 
-export default function Car(){
+interface CarProps {
+  clicked: boolean;
+  setClicked: (value: boolean) => void;
+  wingState: boolean;
+  setWingState: (value: boolean) => void;
+  glassState: boolean;
+  setGlassState: (value: boolean) => void;
+  rdState: boolean;
+  setRdState: (value: boolean) => void;
+  rtState: boolean;
+  setRtState: (value: boolean) => void;
+  pdState: boolean;
+  setPdState: (value: boolean) => void;
+  ptState: boolean;
+  setPtState: (value: boolean) => void;
+  skirtState: boolean;
+  setSkirtState: (value: boolean) => void;
+}
+  
 
-    const [clickCoordinate, setClickCoordinate] = useState<Coordinate[]>([]);
-  const [clicked, setClicked] = useState(false);
-  const [wingState, setWingState] = useState(false);
-  const [glassState, setGlassState] = useState(false);
-  const [rdState, setRdState] = useState(false);
-  const [rtState, setRtState] = useState(false);
-  const [pdState, setPdState] = useState(false);
-  const [ptState, setPtState] = useState(false);
-  const [skirtState, setSkirt] = useState(false);
+
+export default function Car(props: CarProps){
+
+  const [clickCoordinate, setClickCoordinate] = useState<Coordinate[]>([]);
+ 
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (event.target instanceof SVGPathElement) {
@@ -31,25 +45,25 @@ export default function Car(){
         handleBulletHoles(event);
         break;
       case 'aleron':
-        setWingState(true);
+        props.setWingState(true);
         break;
       case 'cristales':
-        setGlassState(true);
+        props.setGlassState(true);
         break;
       case 'rd':
-        setRdState(true);
+        props.setRdState(true);
         break;
       case 'rt':
-        setRtState(true);
+        props.setRtState(true);
         break;
       case 'pd':
-        setPdState(true);
+        props.setPdState(true);
         break;
       case 'pt':
-        setPtState(true);
+        props.setPtState(true);
         break;
       case 'faldon':
-        setSkirt(true);
+        props.setSkirtState(true);
         break;
     }
     console.log(partName);
@@ -61,7 +75,7 @@ export default function Car(){
       const y = event.clientY;
       const bulletNo = bulletNumberRandomize();
       setClickCoordinate(prevCoordinates => [...prevCoordinates, { x, y, bulletNo }]);
-      setClicked(true);
+      props.setClicked(true);
   };
 
   const bulletNumberRandomize = () => {
@@ -71,7 +85,7 @@ export default function Car(){
   return (
     <div className="body997" onClick={handleClick}>
         {/* Alerón*/}
-        {wingState && 
+        {props.wingState && 
         <></>
         ?
         <svg id="a" className="car-part" style={{zIndex: '4'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1622.14 1047.4">
@@ -159,7 +173,7 @@ export default function Car(){
           </g>
         </svg>
         {/* Cristales */}
-        {glassState &&
+        {props.glassState &&
         <></>
         ?
         <svg id="a" className="car-part" style={{zIndex: '4'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1622.14 1047.4">
@@ -215,7 +229,7 @@ export default function Car(){
         </svg>
         }
         {/* Rueda delantera*/}
-        {rdState &&
+        {props.rdState &&
         <></>
         ?
         <svg id="a" className="car-part" style={{zIndex: '4'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1622.14 1047.4">
@@ -269,7 +283,7 @@ export default function Car(){
         </svg>
         }
         {/* Rueda trasera*/}
-        {rtState &&
+        {props.rtState &&
         <></>
         ?
         <svg id="a" className="car-part" style={{zIndex: '4'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1622.14 1047.4">
@@ -323,7 +337,7 @@ export default function Car(){
         </svg>
         }
         {/* Parachoques delantero */}
-        {pdState &&
+        {props.pdState &&
         <></>
         ?
         <svg id="a" className="car-part" style={{zIndex: '5'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1622.14 1047.4">
@@ -399,7 +413,7 @@ export default function Car(){
         </svg>
         }
         {/* Parachoques trasero */}
-        {ptState &&
+        {props.ptState &&
         <></>
         ?
         <svg id="a" className="car-part"  style={{zIndex: '5'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1622.14 1047.4">
@@ -478,7 +492,7 @@ export default function Car(){
         </svg>
         }
         {/* Faldón */}
-        {!skirtState &&
+        {!props.skirtState &&
         <svg id="faldon" className="car-part-delete" style={{zIndex: '4'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1622.14 1047.4">
           <g id="c">
             <path d="M792.46,974.8c-3.11,11.79-8.25,25.08-11.56,39.71-.96,4.25,2.21,8.32,6.57,8.42,9.81.23,22.52.45,30.93-.23,29.15-2.36,70.63-15.61,207.46-7.64,7.6.44,13.67-6.25,12.45-13.77-1.85-11.45-3.64-13.92-4.8-23.48l-241.06-3.02Z" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="13"/>
@@ -501,7 +515,7 @@ export default function Car(){
         <img className="car-part" src="/images/car-parts/Chasis.png" style={{zIndex: '3'}}/>
         {/* Borde carroceria */}
         <img className="car-part" src="/images/car-parts/Borde.png" style={{zIndex: '3'}}/>
-        {clicked && clickCoordinate.map(({ x, y, bulletNo }, index) => (
+        {props.clicked && clickCoordinate.map(({ x, y, bulletNo }, index) => (
           <img
             key={`${x}-${y}-${bulletNo}`}
             className="bullet-hole"
