@@ -23,15 +23,7 @@ export default function ResetButton(props: ButtonProps){
             props.setPdState(false);
             props.setPtState(false);
             props.setSkirtState(false);
-            props.setResetButtonState(true);
-
-            /*const bulletHoles = document.querySelectorAll('.bullet-holes');
-            bulletHoles.forEach(bulletHole => bulletHole.remove());*/
-
-            /*const bulletHoles = document.getElementById('bullet-holes');
-            if (bulletHoles) {
-                bulletHoles.innerHTML = '';
-            }*/            
+            props.setResetButtonState(true);          
     };
 
     return(
