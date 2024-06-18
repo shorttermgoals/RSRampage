@@ -3,7 +3,7 @@
 
 import Car from "../../components/Car";
 import ResetButton from "../../components/ResetButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -17,6 +17,7 @@ export default function Home() {
   const [pdState, setPdState] = useState(false);
   const [ptState, setPtState] = useState(false);
   const [skirtState, setSkirtState] = useState(false);
+  const [resetButtonState, setResetButtonState] = useState(false);
 
   return (
     <main>
@@ -41,6 +42,7 @@ export default function Home() {
             pdState={pdState} setPdState={setPdState}
             ptState={ptState} setPtState={setPtState}
             skirtState={skirtState} setSkirtState={setSkirtState}
+            resetButtonState={resetButtonState} setResetButtonState={setResetButtonState}
             />
           </div>
           
@@ -56,6 +58,7 @@ export default function Home() {
             setPdState={setPdState}
             setPtState={setPtState}
             setSkirtState={setSkirtState}
+            setResetButtonState={setResetButtonState}
             />
           </div>
         </div>

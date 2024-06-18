@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Coordinate {
     x: number;
@@ -25,6 +25,8 @@ interface CarProps {
   setPtState: (value: boolean) => void;
   skirtState: boolean;
   setSkirtState: (value: boolean) => void;
+  resetButtonState: boolean;
+  setResetButtonState: (value: boolean) => void;
 }
   
 
@@ -73,16 +75,23 @@ export default function Car(props: CarProps){
   const handleBulletHoles = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       const x = event.clientX;
       const y = event.clientY;
-      const bulletNo = bulletNumberRandomize();
+      const bulletNo = Math.floor(Math.random() * 7) + 1;
       setClickCoordinate(prevCoordinates => [...prevCoordinates, { x, y, bulletNo }]);
-      props.setClicked(true);
   };
 
-  const bulletNumberRandomize = () => {
-    return Math.floor(Math.random() * 7) + 1;
-  };
+  const handleReset = () => {
+    setClickCoordinate([]);
+  }
+
+  useEffect(()=>{
+    if(props.resetButtonState) {
+      handleReset();
+      props.setResetButtonState(false);
+    }
+  },[props.resetButtonState, props.setResetButtonState]);
 
   return (
+    <>
     <div className="body997" onClick={handleClick}>
         {/* Alerón*/}
         {props.wingState && 
@@ -515,7 +524,9 @@ export default function Car(props: CarProps){
         <img className="car-part" src="/images/car-parts/Chasis.png" style={{zIndex: '3'}}/>
         {/* Borde carroceria */}
         <img className="car-part" src="/images/car-parts/Borde.png" style={{zIndex: '3'}}/>
-        {props.clicked && clickCoordinate.map(({ x, y, bulletNo }, index) => (
+      </div>
+      <div id="bullet-holes" className="bullet-holes" >
+        {clickCoordinate.map(({ x, y, bulletNo }) => (     
           <img
             key={`${x}-${y}-${bulletNo}`}
             className="bullet-hole"
@@ -532,5 +543,6 @@ export default function Car(props: CarProps){
           />
         ))}
       </div>
+      </>
   );
 }
