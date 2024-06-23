@@ -3,7 +3,8 @@
 
 import Car from "../../components/Car";
 import ResetButton from "../../components/ResetButton";
-import { useEffect, useState } from "react";
+import Fence from "../../components/Fence";
+import { useState } from "react";
 
 
 
@@ -32,7 +33,7 @@ export default function Home() {
         </div>
         <div className="image-background">
           <div className="image">
-            <img className="valla" src="/images/Valla.png"></img>
+            <Fence/>
             <Car 
             clicked={clicked} setClicked={setClicked}
             wingState={wingState} setWingState={setWingState}
