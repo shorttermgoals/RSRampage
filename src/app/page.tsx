@@ -31,7 +31,7 @@ export default function Home() {
             <span className="url-text">made by <a className="url-text" href="">shorttermgoalz</a></span>
           </div>
         </div>
-        <div className="image-background">
+          <div className="image-background">
           <div className="image">
             <Fence/>
             <Car 
@@ -48,7 +48,8 @@ export default function Home() {
           </div>
           
         </div>
-        <div className="reset-button">
+        {/**
+         * <div className="reset-button">
           <div className="button">
             <ResetButton
             setClicked={setClicked}
@@ -63,6 +64,9 @@ export default function Home() {
             />
           </div>
         </div>
+         * 
+         */}
+        
       </div>
     </main>
   );
