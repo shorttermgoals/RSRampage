@@ -10,9 +10,7 @@ body{
   margin: 0;
 }
 
-main{
-  height: 100vh;
-}
+
 
 svg {
   pointer-events: none;
@@ -84,9 +82,7 @@ svg.car-part-swap text {
   pointer-events: auto;
 }
 
-.container{
-  height: 100%;
-}
+
 
 .title{
   margin-top: -2vw;
@@ -176,10 +172,6 @@ svg.button path{
     display: none;
   }
 
-  .body997{
-   
-  }
-
   .car-part{
     width: 60vw;
   }
@@ -203,6 +195,33 @@ svg.button path{
   
   .valla{
     width: 70vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .car-part{
+    width: 70vw;
+  }
+  
+  .car-part-svg{
+    width: 70vw;
+  }
+  
+  .car-part-swap{
+    width: 70vw;
+  }
+  
+  .car-part-delete{
+    width: 70vw;
+  }
+
+  .image{
+    margin-top: -6vw;
+    width: 70vw;
+  }
+  
+  .valla{
+    width: 78vw;
   }
 }
 
@@ -236,13 +255,13 @@ svg.button path{
 
 @media screen and (max-width: 700px) {
   .body997{
-    margin-top: 7vh;
+    margin-top: 4.5vh;
   }
 
  
 
   .image{
-    margin-top: 6vh;
+    margin-top: 12vh;
     width: 75vw;
   }
   
@@ -250,10 +269,7 @@ svg.button path{
 }
 
 @media screen and (max-width: 500px) {
-  .body997{
-    margin-top: 4vh;
-  }
-
+ 
   .car-part{
     width: 75vw;
   }
@@ -271,7 +287,6 @@ svg.button path{
   }
 
   .image{
-    margin-top: 15vh;
     width: 75vw;
   }
   
