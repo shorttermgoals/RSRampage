@@ -30,7 +30,7 @@ svg, img {
 
 .body997{
   width: 60vw;
-  margin-top: 4vw;
+  margin-top: 8.4vh;
   display: grid;
   justify-items: center;
 }
@@ -147,14 +147,14 @@ svg.car-part-swap text {
 
 .reset-button{
   width: 100%;
-  height: 4vh;
+  padding-top: 7px;
   display: grid;
   align-self: end;
   justify-content: center;
 }
 
 .button{
-  width: 8vw;
+  width: 140px;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -175,6 +175,35 @@ svg.button path{
   .url-text{
     display: none;
   }
+
+  .body997{
+   
+  }
+
+  .car-part{
+    width: 60vw;
+  }
+  
+  .car-part-svg{
+    width: 60vw;
+  }
+  
+  .car-part-swap{
+    width: 60vw;
+  }
+  
+  .car-part-delete{
+    width: 60vw;
+  }
+
+  .image{
+    margin-top: -6vw;
+    width: 60vw;
+  }
+  
+  .valla{
+    width: 70vw;
+  }
 }
 
 /* DETERMINAR LA ANCHURA DE ESTE CAMBIO EN BASE COMO SE VEA CON EL COCHE*/
@@ -182,5 +211,71 @@ svg.button path{
 @media screen and (max-width: 850px) {
   .title{
     margin-top: 12vw;
+  }
+
+  .car-part{
+    width: 75vw;
+  }
+  
+  .car-part-svg{
+    width: 75vw;
+  }
+  
+  .car-part-swap{
+    width: 75vw;
+  }
+  
+  .car-part-delete{
+    width: 75vw;
+  }
+
+  .valla{
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .body997{
+    margin-top: 7vh;
+  }
+
+ 
+
+  .image{
+    margin-top: 6vh;
+    width: 75vw;
+  }
+  
+  
+}
+
+@media screen and (max-width: 500px) {
+  .body997{
+    margin-top: 4vh;
+  }
+
+  .car-part{
+    width: 75vw;
+  }
+  
+  .car-part-svg{
+    width: 75vw;
+  }
+  
+  .car-part-swap{
+    width: 75vw;
+  }
+  
+  .car-part-delete{
+    width: 75vw;
+  }
+
+  .image{
+    margin-top: 15vh;
+    width: 75vw;
+  }
+  
+  .valla{
+    width: 85vw;
   }
 }

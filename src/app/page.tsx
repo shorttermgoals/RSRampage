@@ -46,10 +46,8 @@ export default function Home() {
             resetButtonState={resetButtonState} setResetButtonState={setResetButtonState}
             />
           </div>
-          
         </div>
-        {/**
-         * <div className="reset-button">
+        <div className="reset-button">
           <div className="button">
             <ResetButton
             setClicked={setClicked}
@@ -63,10 +61,7 @@ export default function Home() {
             setResetButtonState={setResetButtonState}
             />
           </div>
-        </div>
-         * 
-         */}
-        
+        </div>        
       </div>
     </main>
   );
