@@ -10,6 +10,231 @@ body{
   margin: 0;
 }
 
+.container{
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-rows: 16vh 72vh 12vh;
+}
+
+.title{
+  margin-top: 0px;
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 3.3vw;
+  place-items: center;
+}
+
+.title-text{
+  font-size: 12vw;
+  letter-spacing: -0.7vw;
+  display: grid;
+  align-self: start;
+}
+
+.under-title{
+  height: 3.3vw;
+  width: 100%;
+  margin-top: -90px;
+  display: grid;
+  place-items: end;
+}
+
+.url{
+  margin-right: 9.9vw;
+  width: 12.4vw;
+  height: 2vw;
+  background-color: #333333;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.url-text{
+  font-family: 'Futura', sans-serif;
+  font-weight: bold;
+  margin-top: -0.1vw;
+  font-size: 0.9vw;
+  color: gainsboro;
+}
+
+.image-background{
+  height: auto;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+.image{
+  width: 100vw;
+  display: grid;
+  justify-items: center;
+}
+
+.valla{
+  display: grid;
+  align-self: start;
+  width: 55%;
+  pointer-events: none;
+}
+
+svg {
+  pointer-events: none;
+}
+
+svg path {
+  pointer-events: auto;
+}
+
+svg{
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.body997{
+  width: 49vw;
+  margin-top: -25vh;
+  display: grid;
+  justify-items: center;
+}
+
+.car-part{
+  position: absolute;
+  width: 49vw;
+}
+
+.car-part-svg{
+  position: absolute;
+  width: 49vw;
+}
+
+.car-part-swap{
+  position: absolute;
+  width: 49vw;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.car-part-swap:hover{
+  opacity: 0.85;
+  
+}
+
+.car-part-delete{
+  position: absolute;
+  width: 49vw;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.car-part-delete:hover{
+  cursor:grabbing;
+  opacity: 0.8;
+}
+
+.bullet-hole{
+  cursor: crosshair;
+  width: 4vw;
+}
+
+svg.car-part-svg path{
+  cursor: crosshair;
+}
+
+svg.car-part-swap path,
+svg.car-part-swap circle,
+svg.car-part-swap ellipse,
+svg.car-part-swap rect,
+svg.car-part-swap line,
+svg.car-part-swap polyline,
+svg.car-part-swap polygon,
+svg.car-part-swap text {
+  cursor: grabbing !important;
+  pointer-events: auto;
+}
+
+.reset-button{
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 9vh 2.7vh;
+}
+
+.button{
+  height: 7vh;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.button:hover{
+  opacity: 0.9;
+}
+
+svg.button path{
+  cursor: pointer;
+}
+
+.url-text-footer{
+  display: none;
+}
+
+
+
+@media screen and (max-width:1200px) {
+  .url{
+    background-color: transparent;
+  }
+
+  .url-text{
+    display: none;
+  }
+
+  .url-footer{
+    width: 16.2vh;
+    height: 2.7vh;
+    background-color: #333333;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .url-text-footer{
+    display: inline;
+    font-family: 'Futura', sans-serif;
+    font-weight: bold;
+    font-size: 1.22vh;
+    color: gainsboro;
+  }
+
+  .button{
+    height: 8.63vh;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .container{
+    grid-template-rows: 30vh 40vh 30vh;
+  }
+
+  .title-text{
+    align-self: end;
+  }
+}
+
+/* a {
+  color: #333333;
+  font-family: 'Futura', sans-serif;
+  font-weight: bold;
+}
+
+body{
+  background-color: gainsboro;
+  padding: 0;
+  margin: 0;
+}
+
 svg {
   pointer-events: none;
 }
@@ -235,8 +460,6 @@ svg.button path{
   }
 }
 
-/* DETERMINAR LA ANCHURA DE ESTE CAMBIO EN BASE COMO SE VEA CON EL COCHE*/
-
 @media screen and (max-width: 850px) {
   .title{
     margin-top: 12vw;
@@ -316,4 +539,5 @@ svg.button path{
   .valla{
     width: 85vw;
   }
-}
+} */
+

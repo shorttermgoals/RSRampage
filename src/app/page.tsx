@@ -24,16 +24,16 @@ export default function Home() {
     <main>
       <div className="container">
         <div className="title">
-          <a>Vandalize me!</a>
-        </div>
-        <div className="under-title">
-          <div className="url">
-            <span className="url-text">made by <a className="url-text" href="">shorttermgoalz</a></span>
+          <a className="title-text">Vandalize me!</a>
+          <div className="under-title">
+            <div className="url">
+              <span className="url-text">made by <a className="url-text" href="">shorttermgoalz</a></span>
+            </div>
           </div>
         </div>
-          <div className="image-background">
+        <div className="image-background">
           <div className="image">
-            <Fence/>
+            {/*<Fence/>
             <Car 
             clicked={clicked} setClicked={setClicked}
             wingState={wingState} setWingState={setWingState}
@@ -44,7 +44,7 @@ export default function Home() {
             ptState={ptState} setPtState={setPtState}
             skirtState={skirtState} setSkirtState={setSkirtState}
             resetButtonState={resetButtonState} setResetButtonState={setResetButtonState}
-            />
+            /> */}
           </div>
         </div>
         <div className="reset-button">
@@ -60,6 +60,9 @@ export default function Home() {
             setSkirtState={setSkirtState}
             setResetButtonState={setResetButtonState}
             />
+          </div>
+          <div className="url-footer">
+            <span className="url-text-footer">made by <a className="url-text-footer" href="">shorttermgoalz</a></span>
           </div>
         </div>        
       </div>
