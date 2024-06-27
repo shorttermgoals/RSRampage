@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         <div className="image-background">
           <div className="image">
-            {/*<Fence/>
+            <Fence/>
             <Car 
             clicked={clicked} setClicked={setClicked}
             wingState={wingState} setWingState={setWingState}
@@ -44,7 +44,7 @@ export default function Home() {
             ptState={ptState} setPtState={setPtState}
             skirtState={skirtState} setSkirtState={setSkirtState}
             resetButtonState={resetButtonState} setResetButtonState={setResetButtonState}
-            /> */}
+            />
           </div>
         </div>
         <div className="reset-button">

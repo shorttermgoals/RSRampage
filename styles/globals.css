@@ -22,7 +22,7 @@ body{
   height: auto;
   width: 100%;
   display: grid;
-  grid-template-rows: auto 3.3vw;
+  grid-template-rows: auto 7vh;
   place-items: center;
 }
 
@@ -34,9 +34,9 @@ body{
 }
 
 .under-title{
-  height: 3.3vw;
+  height: 7vh;
   width: 100%;
-  margin-top: -90px;
+  margin-top: -15vh;
   display: grid;
   place-items: end;
 }
@@ -71,12 +71,13 @@ body{
   width: 100vw;
   display: grid;
   justify-items: center;
+  align-content: center;
 }
 
 .valla{
   display: grid;
   align-self: start;
-  width: 55%;
+  width: 53vw;
   pointer-events: none;
 }
 
@@ -94,25 +95,28 @@ svg{
 }
 
 .body997{
+  position: absolute;
+  margin-top: 30px;
+  height: 72vh;
   width: 49vw;
-  margin-top: -25vh;
   display: grid;
   justify-items: center;
+  align-items: center;
 }
 
 .car-part{
   position: absolute;
-  width: 49vw;
+  width: 48vw;
 }
 
 .car-part-svg{
   position: absolute;
-  width: 49vw;
+  width: 48vw;
 }
 
 .car-part-swap{
   position: absolute;
-  width: 49vw;
+  width: 48vw;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -123,7 +127,7 @@ svg{
 
 .car-part-delete{
   position: absolute;
-  width: 49vw;
+  width: 48vw;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -134,7 +138,7 @@ svg{
 
 .bullet-hole{
   cursor: crosshair;
-  width: 4vw;
+  width: 5vw;
 }
 
 svg.car-part-svg path{
@@ -162,7 +166,7 @@ svg.car-part-swap text {
 }
 
 .button{
-  height: 7vh;
+  height: 8.63vh;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -178,7 +182,11 @@ svg.button path{
   display: none;
 }
 
-
+@media screen and (max-width:2200px) {
+  .valla{
+    width: 53vw;
+  }
+}
 
 @media screen and (max-width:1200px) {
   .url{
@@ -187,6 +195,34 @@ svg.button path{
 
   .url-text{
     display: none;
+  }
+
+  .body997{
+    width: 75vw;
+  }
+  
+  .car-part{
+    width: 75vw;
+  }
+  
+  .car-part-svg{
+    width: 75vw;
+  }
+  
+  .car-part-swap{
+    width: 75vw;
+  }
+  
+  .car-part-delete{
+    width: 75vw;
+  }
+
+  .valla{
+    width: 80vw;
+  }
+
+  .bullet-hole{
+    width: 8vw;
   }
 
   .url-footer{
@@ -203,13 +239,12 @@ svg.button path{
     display: inline;
     font-family: 'Futura', sans-serif;
     font-weight: bold;
-    font-size: 1.22vh;
+    font-size: 1.16vh;
     color: gainsboro;
   }
 
   .button{
     height: 8.63vh;
-    transition: opacity 0.2s ease-in-out;
   }
 }
 
@@ -220,6 +255,15 @@ svg.button path{
 
   .title-text{
     align-self: end;
+  }
+
+  .title{
+    grid-template-rows: auto 0vh;
+  }
+
+  .body997{
+    height: 40vh;
+    margin-top: 13px;
   }
 }
 
