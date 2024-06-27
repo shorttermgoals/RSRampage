@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 interface ButtonProps {
     setClicked: (value: boolean) => void;
     setWingState: (value: boolean) => void;
@@ -24,6 +26,17 @@ export default function ResetButton(props: ButtonProps){
             props.setResetButtonState(true);          
     };
 
+    useEffect(()=>{
+        props.setClicked(false);
+            props.setWingState(false);
+            props.setGlassState(false);
+            props.setRdState(false);
+            props.setRtState(false);
+            props.setPdState(false);
+            props.setPtState(false);
+            props.setSkirtState(false);
+            props.setResetButtonState(true);  
+    },[])
     return(
     <>    
     <div style={{display: 'grid', justifyContent: 'center'}} onClick={HandleResetButton} >
