@@ -96,9 +96,9 @@ svg{
 
 .body997{
   position: absolute;
-  margin-top: 30px;
+  margin-top: 31px;
   height: 72vh;
-  width: 49vw;
+  width: 100vw;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -196,10 +196,6 @@ svg.button path{
   .url-text{
     display: none;
   }
-
-  .body997{
-    width: 75vw;
-  }
   
   .car-part{
     width: 75vw;
@@ -262,7 +258,6 @@ svg.button path{
   }
 
   .body997{
-    width: 100vw;
     height: 40vh;
     margin-top: 13px;
   }
