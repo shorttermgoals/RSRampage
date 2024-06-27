@@ -105,21 +105,17 @@ svg{
 }
 
 .car-part{
-  position: fixed;
+  position: inherit;
   width: 48vw;
 }
 
 .car-part-svg{
-  position: fixed;
-  display: grid;
-  place-self: center;
+  position: inherit;
   width: 48vw;
 }
 
 .car-part-swap{
-  position: fixed;
-  display: grid;
-  place-items: center;
+  position: inherit;
   width: 48vw;
   transition: opacity 0.2s ease-in-out;
 }
@@ -130,9 +126,7 @@ svg{
 }
 
 .car-part-delete{
-  position: fixed;
-  display: grid;
-  place-content: center;
+  position: inherit;
   width: 48vw;
   transition: opacity 0.2s ease-in-out;
 }
