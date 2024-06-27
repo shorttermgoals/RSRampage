@@ -98,24 +98,24 @@ svg{
   position: absolute;
   margin-top: 31px;
   height: 72vh;
-  width: 100vw;
+  width: 98vw;
   display: grid;
   justify-items: center;
   align-items: center;
 }
 
 .car-part{
-  position: absolute;
+  position: fixed;
   width: 48vw;
 }
 
 .car-part-svg{
-  position: absolute;
+  position: fixed;
   width: 48vw;
 }
 
 .car-part-swap{
-  position: absolute;
+  position: fixed;
   width: 48vw;
   transition: opacity 0.2s ease-in-out;
 }
@@ -126,7 +126,7 @@ svg{
 }
 
 .car-part-delete{
-  position: absolute;
+  position: fixed;
   width: 48vw;
   transition: opacity 0.2s ease-in-out;
 }
@@ -260,6 +260,10 @@ svg.button path{
   .body997{
     height: 40vh;
     margin-top: 13px;
+  }
+
+  .button{
+    transition: none;
   }
 
   .button:hover{
