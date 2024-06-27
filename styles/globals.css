@@ -262,8 +262,13 @@ svg.button path{
   }
 
   .body997{
+    width: 80vw;
     height: 40vh;
     margin-top: 13px;
+  }
+
+  .button:hover{
+    opacity: 1;
   }
 }
 
