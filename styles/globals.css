@@ -14,7 +14,7 @@ body{
   display: grid;
   width: 100%;
   height: 100vh;
-  grid-template-rows: 16vh 72vh 12vh;
+  grid-template-rows: 16vh 72vh 10vh;
 }
 
 .title{

@@ -50,14 +50,14 @@ export default function Home() {
         <div className="reset-button">
           <div className="button">
             <ResetButton
-            setClicked={setClicked}
-            setWingState={setWingState}
-            setGlassState={setGlassState}
-            setRdState={setRdState}
-            setRtState={setRtState}
-            setPdState={setPdState}
-            setPtState={setPtState}
-            setSkirtState={setSkirtState}
+            clicked={clicked} setClicked={setClicked}
+            wingState={wingState} setWingState={setWingState}
+            glassState={glassState} setGlassState={setGlassState}
+            rdState={rdState} setRdState={setRdState}
+            rtState={rtState} setRtState={setRtState}
+            pdState={pdState} setPdState={setPdState}
+            ptState={ptState} setPtState={setPtState}
+            skirtState={skirtState}setSkirtState={setSkirtState}
             setResetButtonState={setResetButtonState}
             />
           </div>

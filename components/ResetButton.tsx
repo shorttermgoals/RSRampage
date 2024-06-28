@@ -1,13 +1,19 @@
-import { useEffect } from "react";
-
 interface ButtonProps {
+    clicked: boolean;
     setClicked: (value: boolean) => void;
+    wingState: boolean;
     setWingState: (value: boolean) => void;
+    glassState: boolean;
     setGlassState: (value: boolean) => void;
+    rdState: boolean;
     setRdState: (value: boolean) => void;
+    rtState: boolean;
     setRtState: (value: boolean) => void;
+    pdState: boolean;
     setPdState: (value: boolean) => void;
+    ptState: boolean;
     setPtState: (value: boolean) => void;
+    skirtState: boolean;
     setSkirtState: (value: boolean) => void;
     setResetButtonState: (value: boolean) => void;
 }
@@ -15,28 +21,35 @@ interface ButtonProps {
 export default function ResetButton(props: ButtonProps){
 
     const HandleResetButton = () => {
-            props.setClicked(false);
-            props.setWingState(false);
-            props.setGlassState(false);
-            props.setRdState(false);
-            props.setRtState(false);
-            props.setPdState(false);
-            props.setPtState(false);
-            props.setSkirtState(false);
+
+            if(props.clicked){
+                props.setClicked(false);
+            }
+            if(props.wingState){
+                props.setWingState(false);
+            }
+            if(props.glassState){
+                props.setGlassState(false);
+            }
+            if(props.rdState){
+                props.setRdState(false);
+            }
+            if(props.rtState){
+                props.setRtState(false);
+            }
+            if(props.pdState){
+                props.setPdState(false);
+            }
+            if(props.ptState){
+                props.setPtState(false);
+            }
+            if(props.skirtState){
+                props.setSkirtState(false);
+            }
+            
             props.setResetButtonState(true);          
     };
 
-    useEffect(()=>{
-        props.setClicked(false);
-            props.setWingState(false);
-            props.setGlassState(false);
-            props.setRdState(false);
-            props.setRtState(false);
-            props.setPdState(false);
-            props.setPtState(false);
-            props.setSkirtState(false);
-            props.setResetButtonState(true);  
-    },[])
     return(
     <>    
     <div style={{display: 'grid', justifyContent: 'center'}} onClick={HandleResetButton} >
