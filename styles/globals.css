@@ -108,8 +108,8 @@ svg{
 .car-part-svg{
   position: absolute;
   width: 48vw;
-  top: 1; /* Coloca en la misma posición superior */
-  left: 1;
+  transform: translate(0, 0);
+  transform-origin: center center;
 }
 
 .car-part-swap,
