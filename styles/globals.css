@@ -4,6 +4,11 @@ a {
   font-weight: bold;
 }
 
+tspan{
+  font-family: 'Futura', sans-serif;
+  font-weight: bold;
+}
+
 body{
   background-color: gainsboro;
   padding: 0;
