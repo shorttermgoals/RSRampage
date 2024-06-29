@@ -166,6 +166,7 @@ svg.car-part-swap text {
 .button{
   height: 8.63vh;
   transition: opacity 0.2s ease-in-out;
+  z-index: 1;
 }
 
 .button:hover{
@@ -242,7 +243,31 @@ svg.button path{
   }
 }
 
+@media screen and (max-width: 950px) {
+  .container{
+    grid-template-rows: 20vh 60vh 20vh ;
+  }
+
+  .title-text{
+    font-size: 13vw;
+    align-self: end;
+  }
+
+  .title{
+    grid-template-rows: auto 0vh;
+  }
+
+  .body997{
+    height: 60vh;
+  }
+}
+
 @media screen and (max-width:600px) {
+
+  .title-text{
+    font-size: 13.5vw;
+  }
+
   .container{
     grid-template-rows: 30vh 40vh 30vh;
   }
