@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Futura', sans-serif;
-  src: url('../public/font/FUTURA75BOLD.TTF') format('truetype');
+  src: url('../public/font/FUTURA75BOLD.woff') format('woff'),
+    url('../public/font/FUTURA75BOLD.woff2') format('woff2');
   font-weight: bold;
 }
 
